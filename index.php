@@ -44,7 +44,7 @@ echo $curl;
             "service_id" => "".$pkgid.""
         );
         $request = base64_encode(json_encode($query));
-        return $this->cHeader("https://trxpackages.api.axis.co.id/package/batch/v2",$request,$auth);
+        return $this->cHeader("https://trxpackages.api.axis.co.id/package/batch/v3",$request,$auth);
     }
 }
 

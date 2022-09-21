@@ -11,7 +11,7 @@ class AxisNET
     function cHeader($url,$request,$auth)
     {
         $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://trxpackages.api.axis.co.id/claimmccm/v3');
+curl_setopt($ch, CURLOPT_URL, 'https://m-assets.api.axis.co.id/claimmccm/v3');
 curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
 curl_setopt($ch, CURLOPT_POST, 1);
 $headers = array();
@@ -44,7 +44,7 @@ echo $curl;
             "service_id" => "".$pkgid.""
         );
         $request = base64_encode(json_encode($query));
-        return $this->cHeader("https://trxpackages.api.axis.co.id/package/batch/v3",$request,$auth);
+        return $this->cHeader("https://m-assets.api.axis.co.id/package/batch/v2",$request,$auth);
     }
 }
 
